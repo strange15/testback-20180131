@@ -4,13 +4,13 @@
       <Layout>
         <Sider ref="side1">
           <div style="cursor: pointer;">
-            <img src="http://lorempixel.com/output/technics-q-g-200-80-1.jpg" alt="">
+            <img src="http://lorempixel.com/400/200/" style="width:200px; height:80px;" alt="">
           </div>
-          <Menu active-name="1-1" theme="dark" width="auto" :class="menuitemClasses">
+          <Menu active-name="1-1" theme="dark" width="auto" :class="menuitemClasses" @on-select="naviSelect">
             <MenuItem name="1-1">
             <span>首頁</span>
             </MenuItem>
-            <MenuItem name="1-2">
+            <MenuItem name="1-2" href="/page">
             <span>未平倉單</span>
             </MenuItem>
             <MenuItem name="1-3">
@@ -99,7 +99,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods:{
+    naviSelect(name){
+      console.log(name);
+      return name;
+    }
+  }
+}
 </script>
 
 <style lang="scss">
