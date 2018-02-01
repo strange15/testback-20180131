@@ -10,8 +10,12 @@
             <MenuItem name="1-1">
             <span>首頁</span>
             </MenuItem>
-            <MenuItem name="1-2" href="/page">
-            <span>未平倉單</span>
+            <MenuItem name="1-2">
+            <a href="/page" class="">
+              <b class="jbColor"></b>
+              <i class="user_icon i_nav_9"></i>
+              <span>未平倉單</span>
+            </a>
             </MenuItem>
             <MenuItem name="1-3">
             <span>已平倉單</span>
@@ -72,7 +76,9 @@
                   <div class="icons">
                     <Icon type="android-settings" size="30"></Icon>
                     <Icon type="power" size="30"></Icon>
-                    <Badge count="1"><Icon type="ios-bell-outline" size="30"></Icon></Badge>
+                    <Badge count="1">
+                      <Icon type="ios-bell-outline" size="30"></Icon>
+                    </Badge>
                     <Icon type="headphone" size="30"></Icon>
                   </div>
                   <div class="money">
@@ -100,10 +106,10 @@
 
 <script>
 export default {
-  methods:{
-    naviSelect(name){
-      console.log(name);
-      return name;
+  methods: {
+    naviSelect(name) {
+      console.log(name)
+      return name
     }
   }
 }
